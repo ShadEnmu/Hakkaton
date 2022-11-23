@@ -1,5 +1,6 @@
-package com.vinya.hakkaton.scan.domain.analyzer
+package com.vinya.hakkaton.scan.domain.model.analyzer
 
+import android.annotation.SuppressLint
 import android.util.Log
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
@@ -8,6 +9,7 @@ import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.common.InputImage
 
 class BarcodeAnalyzer : ImageAnalysis.Analyzer {
+    @SuppressLint("UnsafeOptInUsageError")
     override fun analyze(imageProxy: ImageProxy) {
         imageProxy.image?.let { image ->
             val inputImage = InputImage.fromMediaImage(image, imageProxy.imageInfo.rotationDegrees)

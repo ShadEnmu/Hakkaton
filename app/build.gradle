@@ -39,6 +39,10 @@ android {
 }
 
 dependencies {
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
+    implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
+
     //ML Kit Barcode Scanning
     implementation 'com.google.mlkit:barcode-scanning:16.0.3'
 
