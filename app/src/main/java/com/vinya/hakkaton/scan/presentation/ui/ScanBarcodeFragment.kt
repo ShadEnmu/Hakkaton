@@ -43,7 +43,7 @@ class ScanBarcodeFragment  :
                 .requireLensFacing(CameraSelector.LENS_FACING_BACK)
                 .build()
             val imageAnalysis = ImageAnalysis.Builder()
-                .setTargetResolution(Size(1980, 1024))
+                .setTargetResolution(Size(1240, 680))
                 .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                 .build()
             preview.setSurfaceProvider(previewView.createSurfaceProvider(null))
