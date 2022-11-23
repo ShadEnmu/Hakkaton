@@ -1,6 +1,11 @@
 package com.vinya.hakkaton.scan.presentation
 
+import android.Manifest
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Size
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
@@ -27,6 +32,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // TODO: Переделать запрос на доступ к камере   
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.CAMERA
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            Intent().also {
+                it.action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
+                it.data = Uri.fromParts("package", packageName, null)
+                startActivity(it)
+                finish()
+            }
+        }
+
+        // TODO: Вынести всё это в модули и отдельные классы 
         cameraExecutor = Executors.newSingleThreadExecutor()
         cameraProvider = ProcessCameraProvider.getInstance(this)
         previewView = findViewById(R.id.previewView)
