@@ -1,12 +1,11 @@
 package com.vinya.hakkaton.scan.domain.model.analyzer
 
 import android.annotation.SuppressLint
-import android.util.Log
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import androidx.navigation.NavController
-import com.google.mlkit.vision.barcode.Barcode
 import com.google.mlkit.vision.barcode.BarcodeScanning
+import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
 import com.vinya.hakkaton.R
 
