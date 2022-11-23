@@ -1,5 +1,6 @@
 package com.vinya.hakkaton.scan.domain.analyzer
 
+import android.util.Log
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import com.google.mlkit.vision.barcode.Barcode
@@ -17,8 +18,8 @@ class BarcodeAnalyzer : ImageAnalysis.Analyzer {
                     if (it.isSuccessful) {
                         for (barcode in it.result as List<Barcode>) {
                             when (barcode.valueType) {
-                                Barcode.TYPE_URL -> {
-                                    val url = barcode.url?.url
+                                Barcode.TYPE_TEXT -> {
+                                    Log.d("MainTag", "analyze: ${barcode.displayValue.toString()}")
                                 }
                             }
                         }
