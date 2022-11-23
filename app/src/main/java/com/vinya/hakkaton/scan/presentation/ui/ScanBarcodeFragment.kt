@@ -55,7 +55,6 @@ class ScanBarcodeFragment  :
                 preview
             )
         }, ContextCompat.getMainExecutor(requireContext()))
-            //cosasorqs
     }
 
     companion object {
