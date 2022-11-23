@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                 .requireLensFacing(CameraSelector.LENS_FACING_BACK)
                 .build()
             val imageAnalysis = ImageAnalysis.Builder()
-                .setTargetResolution(Size(1280, 720))
+                .setTargetResolution(Size(1980, 1024))
                 .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                 .build()
             preview.setSurfaceProvider(previewView.createSurfaceProvider(null))
