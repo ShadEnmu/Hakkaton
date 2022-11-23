@@ -44,7 +44,7 @@ class ScanBarcodeFragment :
                 .setTargetResolution(Size(1240, 680))
                 .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                 .build()
-            preview.setSurfaceProvider(previewView.createSurfaceProvider(null))
+            preview.setSurfaceProvider(previewView.surfaceProvider)
             imageAnalysis.setAnalyzer(cameraExecutor, analyzer)
             _cameraProvider.bindToLifecycle(
                 this as LifecycleOwner,
