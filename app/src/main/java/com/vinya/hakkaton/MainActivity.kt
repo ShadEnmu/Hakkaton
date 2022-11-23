@@ -1,5 +1,4 @@
 package com.vinya.hakkaton
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
@@ -9,3 +8,4 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 }
+gdkgkdkgdkgk
