@@ -13,7 +13,6 @@ class FaceScanFragment : BaseFragment() {
     override val layoutId: Int = R.layout.fragment_face
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        findNavController().navigate(R.id.scanBarcodeFragment)
     }
     companion object {
         @JvmStatic
