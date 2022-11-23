@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
-    private val hello : String = "Hello, Vadim"
+    private val hello : String = "Hello, Ваниа"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
