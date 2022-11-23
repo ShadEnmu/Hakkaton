@@ -12,16 +12,14 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
 import androidx.navigation.fragment.findNavController
 import com.google.common.util.concurrent.ListenableFuture
-import com.google.mlkit.vision.barcode.BarcodeScanner
 import com.vinya.hakkaton.R
 import com.vinya.hakkaton.core.presentation.BaseFragment
 import com.vinya.hakkaton.scan.domain.model.analyzer.BarcodeAnalyzer
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
-import javax.inject.Inject
 
 
-class ScanBarcodeFragment  :
+class ScanBarcodeFragment :
     BaseFragment() {
     override val layoutId: Int = R.layout.fragment_barcode
     private lateinit var cameraProvider: ListenableFuture<ProcessCameraProvider>
