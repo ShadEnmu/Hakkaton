@@ -10,6 +10,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
+import androidx.navigation.fragment.findNavController
 import com.google.common.util.concurrent.ListenableFuture
 import com.google.mlkit.vision.barcode.BarcodeScanner
 import com.vinya.hakkaton.R
@@ -26,14 +27,14 @@ class ScanBarcodeFragment  :
     private lateinit var cameraProvider: ListenableFuture<ProcessCameraProvider>
     private lateinit var cameraExecutor: ExecutorService
     private lateinit var previewView: PreviewView
-    private val analyzer = BarcodeAnalyzer()
+    private lateinit var analyzer: BarcodeAnalyzer
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         cameraExecutor = Executors.newSingleThreadExecutor()
         cameraProvider = ProcessCameraProvider.getInstance(requireContext())
         previewView = view.findViewById(R.id.previewView)
-
+        analyzer = BarcodeAnalyzer(findNavController())
         cameraProvider.addListener({
             val _cameraProvider = cameraProvider.get()
             val preview: Preview = Preview.Builder()

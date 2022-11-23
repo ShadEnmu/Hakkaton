@@ -9,5 +9,18 @@
         android:name="com.vinya.hakkaton.scan.presentation.ui.ScanBarcodeFragment"
         android:label="fragment_barcode"
         app:route="barcodeScan"
-        tools:layout="@layout/fragment_barcode" />
+        tools:layout="@layout/fragment_barcode">
+        <action
+            android:id="@+id/action_scanBarcodeFragment_to_faceScanFragment"
+            app:destination="@id/faceScanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/faceScanFragment"
+        android:name="com.vinya.hakkaton.scan.presentation.ui.FaceScanFragment"
+        android:label="fragment_face"
+        tools:layout="@layout/fragment_face" >
+        <action
+            android:id="@+id/action_faceScanFragment_to_scanBarcodeFragment"
+            app:destination="@id/scanBarcodeFragment" />
+    </fragment>
 </navigation>

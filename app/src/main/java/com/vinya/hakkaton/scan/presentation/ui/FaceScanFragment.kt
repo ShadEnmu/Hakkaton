@@ -9,7 +9,7 @@ import com.vinya.hakkaton.R
 import com.vinya.hakkaton.core.presentation.BaseFragment
 
 class FaceScanFragment : BaseFragment() {
-    override val layoutId: Int = R.layout.fragment_face_scan
+    override val layoutId: Int = R.layout.fragment_face
 
     companion object {
         @JvmStatic

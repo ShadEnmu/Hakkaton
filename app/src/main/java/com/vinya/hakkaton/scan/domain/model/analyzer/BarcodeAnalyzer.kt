@@ -4,11 +4,13 @@ import android.annotation.SuppressLint
 import android.util.Log
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
+import androidx.navigation.NavController
 import com.google.mlkit.vision.barcode.Barcode
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.common.InputImage
+import com.vinya.hakkaton.R
 
-class BarcodeAnalyzer : ImageAnalysis.Analyzer {
+class BarcodeAnalyzer(private val navController: NavController) : ImageAnalysis.Analyzer {
     @SuppressLint("UnsafeOptInUsageError")
     override fun analyze(imageProxy: ImageProxy) {
         imageProxy.image?.let { image ->
@@ -21,7 +23,7 @@ class BarcodeAnalyzer : ImageAnalysis.Analyzer {
                         for (barcode in it.result as List<Barcode>) {
                             when (barcode.valueType) {
                                 Barcode.TYPE_TEXT -> {
-                                    Log.d("MainTag", "analyze: ${barcode.displayValue.toString()}")
+                                    navController.navigate(R.id.faceScanFragment)
                                 }
                             }
                         }
