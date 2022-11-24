@@ -10,5 +10,22 @@
         android:id="@+id/previewView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/barcode_text_margin"
+        android:text="@string/point_camera_to_face"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/barcode_text_size"
+        android:alpha="0.9"/>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/background_rect" />
 </FrameLayout>

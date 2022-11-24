@@ -3,4 +3,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="point_camera">Направьте камеру на QR-код</string>
+    <string name="point_camera_to_face">Направьте камеру на лицо</string>
 </resources>

@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gradient_bottom_color">#38F4F4</color>
     <color name="gradient_upper_color">#6AE906</color>
+    <color name="button_scan_face_background_color">#322828</color>
 </resources>

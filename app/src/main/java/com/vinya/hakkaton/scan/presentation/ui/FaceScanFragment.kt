@@ -1,6 +1,7 @@
 package com.vinya.hakkaton.scan.presentation.ui
 
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.View
 import androidx.camera.core.CameraSelector
@@ -9,6 +10,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
+import androidx.navigation.fragment.findNavController
 import com.google.common.util.concurrent.ListenableFuture
 import com.vinya.hakkaton.R
 import com.vinya.hakkaton.core.presentation.BaseFragment
@@ -41,6 +43,10 @@ class FaceScanFragment : BaseFragment() {
         }, ContextCompat.getMainExecutor(requireContext()))
 
         Log.d("MyTag", "onViewCreated: ${arguments?.getStringArrayList("ContactInfo").toString()}")
+
+        Handler().postDelayed({
+            findNavController().navigate(R.id.scanBarcodeFragment)
+        }, 5000)
     }
 
     companion object {
