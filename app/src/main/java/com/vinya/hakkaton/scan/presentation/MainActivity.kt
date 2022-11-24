@@ -7,10 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.vinya.hakkaton.R
+import org.opencv.android.BaseLoaderCallback
+import org.opencv.android.CameraActivity
+import org.opencv.android.CameraBridgeViewBase
+import org.opencv.android.OpenCVLoader
+import org.opencv.core.Mat
 
 
 class MainActivity : AppCompatActivity() {
-    private val PERMISSION_REQUEST_CODE = 200
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,13 +22,15 @@ class MainActivity : AppCompatActivity() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                 == PackageManager.PERMISSION_DENIED)
                 requestPermission()
-
     }
     private fun requestPermission() {
         ActivityCompat.requestPermissions(
             this, arrayOf(Manifest.permission.CAMERA),
             PERMISSION_REQUEST_CODE
         )
+    }
+    companion object {
+        const val PERMISSION_REQUEST_CODE = 200
     }
 
 }
