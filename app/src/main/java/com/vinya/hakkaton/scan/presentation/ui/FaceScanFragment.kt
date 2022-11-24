@@ -46,7 +46,7 @@ class FaceScanFragment : BaseFragment() {
             val bundle = Bundle()
             bundle.putAll(arguments)
             findNavController().navigate(R.id.profileDetailsFragment, bundle)
-        }, 5000)
+        }, 3000)
     }
 
     companion object {

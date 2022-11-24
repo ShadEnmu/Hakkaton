@@ -10,13 +10,14 @@
     <ImageView
         android:id="@+id/profileImageView"
         android:layout_width="260dp"
-        android:layout_height="320dp"
+        android:layout_height="330dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:foreground="@drawable/profile_photo_stroke"
         android:paddingVertical="0dp"
-        android:scaleType="fitXY"
-        tools:src="@drawable/vadim" />
+        android:scaleType="centerCrop"
+        tools:src="@drawable/vadim"
+        />
 
     <TextView
         android:id="@+id/nameTextView"
