@@ -7,11 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.vinya.hakkaton.R
-import org.opencv.android.BaseLoaderCallback
-import org.opencv.android.CameraActivity
-import org.opencv.android.CameraBridgeViewBase
-import org.opencv.android.OpenCVLoader
-import org.opencv.core.Mat
+
 
 
 class MainActivity : AppCompatActivity() {
