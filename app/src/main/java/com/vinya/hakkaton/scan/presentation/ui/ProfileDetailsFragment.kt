@@ -39,7 +39,7 @@ class ProfileDetailsFragment : BaseFragment() {
                 nameTextView.text = fullName
                 stateTextView.text = group
             }
-            "Юлия Хангалова" -> {
+            "Хангалова Юлия" -> {
                 profileImageView.setImageDrawable(activity?.getDrawable(R.drawable.yulia))
                 nameTextView.text = fullName
                 stateTextView.text = group
