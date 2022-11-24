@@ -7,4 +7,12 @@
     tools:context=".scan.presentation.ui.FaceScanFragment"
     >
 
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/text_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="55dp"
+        android:background="@drawable/ic_baseline_check_24"></ImageView>
 </FrameLayout>
