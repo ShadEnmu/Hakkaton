@@ -10,17 +10,34 @@
         android:label="fragment_barcode"
         app:route="barcodeScan"
         tools:layout="@layout/fragment_barcode">
+        <argument
+            android:name="ContactInfo"/>
         <action
-            android:id="@+id/action_scanBarcodeFragment_to_faceScanFragment"
-            app:destination="@id/faceScanFragment" />
+            android:id="@+id/action_scanBarcodeFragment_to_barcodeSuccessFragment"
+            app:destination="@id/barcodeSuccessFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/faceScanFragment"
         android:name="com.vinya.hakkaton.scan.presentation.ui.FaceScanFragment"
         android:label="fragment_face"
         tools:layout="@layout/fragment_face" >
+    </fragment>
+    <fragment
+        android:id="@+id/barcodeSuccessFragment"
+        android:name="com.vinya.hakkaton.scan.presentation.ui.BarcodeSuccessFragment"
+        android:label="fragment_barcode_success"
+        tools:layout="@layout/fragment_barcode_success" >
+
         <action
-            android:id="@+id/action_faceScanFragment_to_scanBarcodeFragment"
-            app:destination="@id/scanBarcodeFragment" />
+            android:id="@+id/action_barcodeSuccessFragment_to_faceScanFragment"
+            app:destination="@id/faceScanFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
 </navigation>
