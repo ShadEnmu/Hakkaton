@@ -29,6 +29,7 @@ class ScanBarcodeFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         cameraExecutor = Executors.newSingleThreadExecutor()
         cameraProvider = ProcessCameraProvider.getInstance(requireContext())
         previewView = view.findViewById(R.id.previewView)
