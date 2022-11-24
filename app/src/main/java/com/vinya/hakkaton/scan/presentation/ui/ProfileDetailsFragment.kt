@@ -44,6 +44,11 @@ class ProfileDetailsFragment : BaseFragment() {
                 nameTextView.text = fullName
                 stateTextView.text = group
             }
+            "Болотов Аюр" -> {
+                profileImageView.setImageDrawable(activity?.getDrawable(R.drawable.ayur))
+                nameTextView.text = fullName
+                stateTextView.text = group
+            }
             else -> {
                 profileImageView.setImageDrawable(activity?.getDrawable(R.drawable.error))
                 nameTextView.text = "Сканирование не удалось"
