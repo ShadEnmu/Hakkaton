@@ -42,10 +42,10 @@ class FaceScanFragment : BaseFragment() {
             )
         }, ContextCompat.getMainExecutor(requireContext()))
 
-        Log.d("MyTag", "onViewCreated: ${arguments?.getStringArrayList("ContactInfo").toString()}")
-
         Handler().postDelayed({
-            findNavController().navigate(R.id.scanBarcodeFragment)
+            val bundle = Bundle()
+            bundle.putAll(arguments)
+            findNavController().navigate(R.id.profileDetailsFragment, bundle)
         }, 5000)
     }
 

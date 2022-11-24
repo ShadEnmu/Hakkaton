@@ -43,6 +43,7 @@
         tools:text="Группа: Б721" />
 
     <ImageButton
+        android:id="@+id/nextImageButton"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:src="@drawable/ic_baseline_center_focus_weak_24"

@@ -47,5 +47,9 @@
         android:id="@+id/profileDetailsFragment"
         android:name="com.vinya.hakkaton.scan.presentation.ui.ProfileDetailsFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileDetailsFragment_to_scanBarcodeFragment"
+            app:destination="@id/scanBarcodeFragment" />
+    </fragment>
 </navigation>
