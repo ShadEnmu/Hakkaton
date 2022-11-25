@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.vinya.hakkaton.R
 import com.vinya.hakkaton.core.presentation.BaseFragment
 
-class ProfileDetailsFragment : BaseFragment() {
+class   ProfileDetailsFragment : BaseFragment() {
     override val layoutId: Int = R.layout.fragment_profile
     private lateinit var profileImageView: ImageView
     private lateinit var nameTextView: TextView

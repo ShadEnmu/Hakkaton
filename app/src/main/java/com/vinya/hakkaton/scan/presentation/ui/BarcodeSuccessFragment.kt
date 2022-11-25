@@ -19,4 +19,5 @@ class BarcodeSuccessFragment: BaseFragment() {
             findNavController().navigate(R.id.faceScanFragment, bundle)
         }, 2000)
     }
+
 }
