@@ -2,9 +2,11 @@ package com.vinya.hakkaton.scan.domain.model.analyzer
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.Handler
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
@@ -36,12 +38,17 @@ class BarcodeAnalyzer(private val navController: NavController) : ImageAnalysis.
                                         contactInfo.add(barcode.contactInfo?.organization.toString())
                                         val bundle = Bundle()
                                         bundle.putStringArrayList("ContactInfo", contactInfo)
-                                        navController.navigate(R.id.barcodeSuccessFragment, bundle)
+                                        Handler().postDelayed({
+                                            navController.navigate(R.id.barcodeSuccessFragment, bundle)
+                                        }, 700)
                                     } else {
                                         contactInfo.add(barcode.contactInfo?.organization.toString())
                                         val bundle = Bundle()
                                         bundle.putStringArrayList("ContactInfo", contactInfo)
-                                        navController.navigate(R.id.profileDetailsFragment, bundle)
+                                        Handler().postDelayed({
+                                            navController.navigate(R.id.profileDetailsFragment, bundle)
+                                        }, 700)
+
                                     }
                                 }
                             }
