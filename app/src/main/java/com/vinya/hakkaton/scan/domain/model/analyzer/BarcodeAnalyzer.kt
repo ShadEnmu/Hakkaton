@@ -26,10 +26,23 @@ class BarcodeAnalyzer(private val navController: NavController) : ImageAnalysis.
                                     val contactInfo: ArrayList<String> = ArrayList()
                                     contactInfo.add(barcode.contactInfo?.name?.first.toString())
                                     contactInfo.add(barcode.contactInfo?.name?.last.toString())
-                                    contactInfo.add(barcode.contactInfo?.organization.toString())
-                                    val bundle = Bundle()
-                                    bundle.putStringArrayList("ContactInfo", contactInfo)
-                                    navController.navigate(R.id.barcodeSuccessFragment, bundle)
+                                    if (barcode.contactInfo?.name?.last.toString() + " " + barcode.contactInfo?.name?.first.toString() in listOf<String>(
+                                            "Черных Вадим",
+                                            "Калашников Никита",
+                                            "Хангалова Юлия",
+                                            "Болотов Аюр"
+                                        )
+                                    ) {
+                                        contactInfo.add(barcode.contactInfo?.organization.toString())
+                                        val bundle = Bundle()
+                                        bundle.putStringArrayList("ContactInfo", contactInfo)
+                                        navController.navigate(R.id.barcodeSuccessFragment, bundle)
+                                    } else {
+                                        contactInfo.add(barcode.contactInfo?.organization.toString())
+                                        val bundle = Bundle()
+                                        bundle.putStringArrayList("ContactInfo", contactInfo)
+                                        navController.navigate(R.id.profileDetailsFragment, bundle)
+                                    }
                                 }
                             }
                         }

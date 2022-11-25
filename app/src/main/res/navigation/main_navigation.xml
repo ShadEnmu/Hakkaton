@@ -19,29 +19,23 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_scanBarcodeFragment_to_profileDetailsFragment2"
+            app:destination="@id/profileDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/faceScanFragment"
         android:name="com.vinya.hakkaton.scan.presentation.ui.FaceScanFragment"
         android:label="fragment_face"
-        tools:layout="@layout/fragment_face" >
-        <action
-            android:id="@+id/action_faceScanFragment_to_profileDetailsFragment"
-            app:destination="@id/profileDetailsFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_face" />
     <fragment
         android:id="@+id/barcodeSuccessFragment"
         android:name="com.vinya.hakkaton.scan.presentation.ui.BarcodeSuccessFragment"
         android:label="fragment_barcode_success"
         tools:layout="@layout/fragment_barcode_success" >
-
         <action
-            android:id="@+id/action_barcodeSuccessFragment_to_faceScanFragment"
-            app:destination="@id/faceScanFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            android:id="@+id/action_barcodeSuccessFragment_to_profileDetailsFragment"
+            app:destination="@id/profileDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileDetailsFragment"
@@ -50,6 +44,10 @@
         tools:layout="@layout/fragment_profile" >
         <action
             android:id="@+id/action_profileDetailsFragment_to_scanBarcodeFragment"
-            app:destination="@id/scanBarcodeFragment" />
+            app:destination="@id/scanBarcodeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
 </navigation>
